@@ -1,0 +1,22 @@
+{
+  "name": "typescript-csv-report",
+  "version": "1.0.0",
+  "description": "Typescript csv report",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elPoeta/typescript-csv-report.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "Leonardo Tosetto (leonardo.a.tosetto@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elPoeta/typescript-csv-report/issues"
+  },
+  "homepage": "https://github.com/elPoeta/typescript-csv-report#readme"
+}
