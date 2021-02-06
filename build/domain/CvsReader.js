@@ -9,10 +9,22 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const CvsReader_1 = require("./domain/CvsReader");
-const read = () => __awaiter(void 0, void 0, void 0, function* () {
-    const csvReader = new CvsReader_1.CsvReader('netflix.csv');
-    yield csvReader.readFile();
-    console.log(csvReader.data);
-});
-read();
+exports.CsvReader = void 0;
+const FileOperation_1 = require("../utils/FileOperation");
+class CsvReader {
+    constructor(fileName) {
+        this.fileName = fileName;
+        this.data = [];
+    }
+    readFile() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const csvString = yield FileOperation_1.FileOperation.getInstance().read(this.fileName);
+            if (csvString === 'ENOENT') {
+                console.log('ENOENT: no such file or directory, open');
+                return;
+            }
+            this.data = csvString.split('\n').map((row) => row.split(','));
+        });
+    }
+}
+exports.CsvReader = CsvReader;
