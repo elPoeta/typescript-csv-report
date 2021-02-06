@@ -1,6 +1,6 @@
 import { ShowType } from './ShowType';
 
-export type NetflixResult = [
+export type NetflixGridResult = [
     string,
     ShowType,
     string,

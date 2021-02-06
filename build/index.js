@@ -10,9 +10,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const CvsReader_1 = require("./domain/CvsReader");
+const NetflixReader_1 = require("./domain/NetflixReader");
 const read = () => __awaiter(void 0, void 0, void 0, function* () {
     const csvReader = new CvsReader_1.CsvReader('netflix.csv');
-    yield csvReader.readFile();
-    console.log(csvReader.data);
+    const netflixReader = new NetflixReader_1.NetflixReader(csvReader);
+    yield netflixReader.loadDataGrid();
+    console.log(netflixReader.grids);
 });
 read();
