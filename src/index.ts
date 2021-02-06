@@ -1,11 +1,8 @@
-import { FileOperation } from './utils/FileOperation';
+import { CsvReader } from './domain/CvsReader';
 
 const read = async () => {
-    const data = await FileOperation.getInstance().read('netflix.csv');
-    if (data === 'ENOENT') {
-        console.log('ENOENT: no such file or directory, open')
-        return;
-    }
-    console.log(data);
+    const csvReader = new CsvReader('netflix.csv');
+    await csvReader.readFile();
+    console.log(csvReader.data);
 }
 read();
