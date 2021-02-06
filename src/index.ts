@@ -1,6 +1,12 @@
-import { FileOperation } from './FileOperation';
-import path from 'path';
+import { FileOperation } from './utils/FileOperation';
 
-const fileOperation = new FileOperation(path.resolve(__dirname, '../csv/netflix.csv'));
-fileOperation.read()
-console.log(fileOperation.data);
+const fileOperation = new FileOperation('netflix.csv');
+const read = async () => {
+    const data = await fileOperation.read();
+    if (data === 'ENOENT') {
+        console.log('ENOENT: no such file or directory, open')
+        return;
+    }
+    console.log(data);
+}
+read();
