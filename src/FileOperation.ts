@@ -1,10 +1,19 @@
 import fs from 'fs';
 
 export class FileOperation {
+    data: string[][] = [];
     constructor(public file: string) { }
 
-    read(): string {
-        const data = fs.readFileSync(this.file, { encoding: 'utf-8' });
-        return data;
+    read(): void {
+        this.data = fs
+            .readFileSync(this.file, {
+                encoding: 'utf-8'
+            })
+            .split('\n')
+            .map(
+                (row: string): string[] => {
+                    return row.split(',');
+                }
+            );;
     }
 }
