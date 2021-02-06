@@ -14,16 +14,3 @@ export type NetflixGridResult = [
     string,
     string
 ];
-
-// show_id	
-// type	
-// title	
-// director	
-// cast	
-// country	
-// date_added	
-// release_year	
-// rating	
-// duration	
-// listed_in	
-// description

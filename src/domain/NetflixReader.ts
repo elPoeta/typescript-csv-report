@@ -27,6 +27,6 @@ export class NetflixReader {
             row[9],
             row[10],
             row[11]
-        ]);
+        ]).slice(1);
     }
 }
