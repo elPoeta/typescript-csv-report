@@ -9,7 +9,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CsvReader = void 0;
 const FileOperation_1 = require("../utils/FileOperation");
 class CsvReader {
     constructor(fileName) {

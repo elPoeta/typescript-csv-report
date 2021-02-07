@@ -1,11 +1,8 @@
 import { NetflixGridResult } from '../types/NetflixGridResult';
+import { DataReader } from '../interfaces/DataReader';
 import { ShowType } from '../types/ShowType';
 import { parseDate, parseYearToNumber } from '../utils/utilParser';
 
-interface DataReader {
-    readFile(): Promise<void>,
-    data: string[][];
-}
 
 export class NetflixReader {
     grids: NetflixGridResult[] = [];

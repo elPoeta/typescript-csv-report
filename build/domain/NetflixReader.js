@@ -9,7 +9,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NetflixReader = void 0;
 const utilParser_1 = require("../utils/utilParser");
 class NetflixReader {
     constructor(reader) {

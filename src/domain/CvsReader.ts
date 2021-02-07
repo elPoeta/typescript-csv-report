@@ -1,6 +1,7 @@
 import { FileOperation } from '../utils/FileOperation';
+import { DataReader } from '../interfaces/DataReader';
 
-export class CsvReader {
+export class CsvReader implements DataReader {
     data: string[][] = [];
 
     constructor(private fileName: string) { }
